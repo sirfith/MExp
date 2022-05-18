@@ -11,6 +11,7 @@ int[] explvl = {0, 650, 1300, 3300, 6000, 10000, 15000, 23000, 34000, 50000, 710
     1200000, 1700000, 2400000, 3450000, 4800000 };
 int[] exp = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 int[] lvl = { 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+int[] lexp = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 // int lvllth = lvl.Length;
 //  1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19   20   21   22   23
 //  1.5 3   3.5 6.5 9   12  18  24  38  45  75  95  145 190 290 395 550 800 1150 1500 3000 6000 12000
@@ -36,30 +37,36 @@ for (int i = 1; i <= maxep; i++)
     {
         if (lvl[k] > 0)
         {
-            exp[k] += (lvlexp * lvl[k]);
-            //        exp[k] += lvlexp;   // CoC
-            for (int l = 1; l <= maxlvl; l++) // check xp of lvl
-            {
-                if (exp[k] >= explvl[l])
+            lexp[k] = (lvlexp * lvl[k]);
+            if (k>1 && (lvl[k] > ((lvl[k - 1]) / 2)))
+               { exp[k - 1] += lexp[k]; }
+            else
+            { exp[k] += lexp[k];
+                //        exp[k] += lvlexp;   // CoC
+                for (int l = 1; l <= maxlvl; l++) // check xp of lvl
                 {
-                    lvl[k] = l;
+                    if (exp[k] >= explvl[l])
+                    {
+                        lvl[k] = l;
+                    }
+                }
+                if ((lvl[k] > 2) && (lvl[k + 1] == 0))
+                {
+                    lvl[k + 1] = 1;
+                    exp[k + 1] = explvl[1];
+                    exp[1] -= explvl[1];
                 }
             }
-            if ((lvl[k] > 4) && (lvl[k + 1] == 0))
-            {
-                lvl[k + 1] = 1;
-                exp[k + 1] = explvl[1];
-                exp[1] -= explvl[1];
-            }
+
         }
     }
     Console.Write("{0} ", i);
-    Console.Write("Add: {0} ", lvlexp);
+    // Console.Write("Add: {0} ", lvlexp);
     for (int j = 0; j <= maxmulti; j++)
     {
-        Console.Write(" #{0} ", j);
-        Console.Write("{0} ", exp[j]);
-        Console.Write("{0} ", lvl[j]);
+        Console.Write("\t #{0} ", j);
+        Console.Write("Xp:{0} ", exp[j]);
+        Console.Write("Lvl:{0} ", lvl[j]);
         if (lvl[j + 1] == 0)
         {
             break;
