@@ -1,0 +1,117 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{AE6D5ED5-8D9B-4A89-A2A2-B96CA259C210}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MExp2</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\08\95e6e07eb08abba19caa05fa2c972fc89964fb" />
+    <None Include=".git\objects\15\3d7a6df87ec8a888e344231ce369515dddd3fa" />
+    <None Include=".git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <None Include=".git\objects\23\d8cb48a1cbeed07e9a6fb8ae7392a0cccad308" />
+    <None Include=".git\objects\2f\85ba165dd75a715ea89f24efddf5700c77c2ea" />
+    <None Include=".git\objects\3a\12cb51bb67f5298a91fe759f678b9d4c704f2f" />
+    <None Include=".git\objects\4c\29989a89b92c5eead5725ca9c665c3df7cb6c9" />
+    <None Include=".git\objects\4e\574583966a08323ae7722c2dbac2152cb4412d" />
+    <None Include=".git\objects\6e\3519d65dee38f2eb63b9bc03aa76b5a25c0da2" />
+    <None Include=".git\objects\74\abf5c9766499f4fd79d4a9398f619d39c2e45e" />
+    <None Include=".git\objects\76\46000b89254607aba306977b94956280ac08e2" />
+    <None Include=".git\objects\7e\9281c14425e53409954fffa76097ee8e8d9bd0" />
+    <None Include=".git\objects\94\91a2fda28342ab358eaf234e1afe0c07a53d62" />
+    <None Include=".git\objects\b6\5c5b3a9694de54307c42f8238eba50fd11ecce" />
+    <None Include=".git\objects\c0\b8eaf76e88c5b767f4a5645094d348a0319d5b" />
+    <None Include=".git\objects\c6\5b84d37d595c559db58a82b377338e963c2c3b" />
+    <None Include=".git\objects\f0\d3a70ceaa69fb70811f58254dc738e0f939eac" />
+    <None Include=".git\objects\ff\3c4225770718a79de994eae16701ed6c731589" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".vs\MExp\DesignTimeBuild\.dtbcache.v2" />
+    <None Include=".vs\MExp\FileContentIndex\7ef23cb2-6cb3-4903-a8d3-1763e4e85bf0.vsidx" />
+    <None Include=".vs\MExp\FileContentIndex\read.lock" />
+    <None Include=".vs\MExp\project-colors.json" />
+    <None Include=".vs\MExp\v17\.futdcache.v1" />
+    <None Include=".vs\MExp\v17\.suo" />
+    <None Include=".vs\ProjectEvaluation\mexp.metadata.v2" />
+    <None Include=".vs\ProjectEvaluation\mexp.projects.v2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".git\ms-persist.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\MExp2\v17\" />
+    <Folder Include=".vs\MExp\FileContentIndex\merges\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
